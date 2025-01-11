@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <nav>
+      <a href="">Shoes Store</a>
+
+      <button onclick="navCart()">
+        <i class="fa-solid fa-cart-shopping cart-nav-icon"></i>
+        <span class="nav-notification">0</span>
+      </button>
+    </nav>
+
+    <div id="content">
+      <div class="cards">
+        <!--  -->
+      </div>
+      <div class="list">
+        <div class="title">
+          <h3>Your Cart (<span class="cart-count">0</span>)</h3>
+          <h4>Total Price $<span class="total-price"></span></h4>
+        </div>
+        <div class="checked-container">
+          <!--  -->
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Website Created By Younes AMAZZAL</p>
+      <div class="media-links">
+        <a href="https://wa.me/212635303129">
+          <button>
+            <i class="fa-brands fa-whatsapp"></i>
+          </button>
+        </a>
+        <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
+          <button>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </button>
+        </a>
+        <a href="https://www.instagram.com/amzprod2">
+          <button>
+            <i class="fa-brands fa-instagram"></i>
+          </button>
+        </a>
+        <a href="https://github.com/YounesAmazzalOriginal">
+          <button>
+            <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

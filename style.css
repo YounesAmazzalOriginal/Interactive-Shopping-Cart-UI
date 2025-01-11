@@ -1,0 +1,353 @@
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", serif;
+}
+:root {
+  --black: #2e2e2e;
+  --white: #f8f8f8;
+  --gray: #d3d3d3;
+  --primary: #3498db;
+  --secondary: #2c3e50;
+  --accent: #f39c12;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar {
+  background-color: var(--gray);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 100px;
+}
+body {
+  overflow-x: hidden;
+}
+
+#cursor {
+  background-color: var(--black);
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  transition: all 0.1s;
+  /* transition: left 0.1s, top 0.1s; */
+  pointer-events: none;
+}
+
+/* Nav */
+nav {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px var(--shadow);
+  overflow: hidden;
+  position: sticky;
+  transition: height 0.4s, padding 0.2s;
+}
+nav a {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+nav button {
+  color: var(--white);
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button:hover {
+  color: var(--primary);
+}
+nav button .nav-notification {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.7rem;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* Content */
+#content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.cards .card {
+  background: var(--white);
+  border-radius: 16px;
+  width: 250px;
+  height: 380px;
+  padding: 15px;
+  box-shadow: 0 4px 6px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+.cards .card:hover {
+  box-shadow: 0 8px 12px var(--shadow);
+}
+
+.cards .card .image-container {
+  height: 60%;
+  overflow: hidden;
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+.cards .card .image-container img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cards .card .text-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.cards .card .text-container h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-top: 5px;
+}
+.cards .card .text-container p {
+  margin-top: 3px;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+.cards .card .text-container button.add {
+  background-color: var(--primary);
+  color: var(--white);
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.cards .card .text-container button.add:hover {
+  background-color: var(--accent);
+}
+
+.cards .card .text-container .price-and-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.cards .card .text-container .price-and-quantity h1 {
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+.cards .card .text-container .price-and-quantity .quantity-container {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards .card .text-container .price-and-quantity .quantity-container button {
+  background-color: var(--gray);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.cards
+  .card
+  .text-container
+  .price-and-quantity
+  .quantity-container
+  button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.cards .card .text-container .price-and-quantity .quantity-container span {
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+/* List */
+.list {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 100vh;
+  top: 72px;
+  width: 0;
+  right: 0;
+  padding-block: 0px 30px !important;
+  overflow-y: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.4s ease;
+  box-shadow: -2px 0 5px var(--shadow);
+  z-index: 100;
+
+  transition: padding 0.2s, width 0.2s;
+}
+.list.show {
+  width: 40%;
+  padding: 5px;
+}
+
+.list .checked-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+}
+.list .checked-container .checked {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--gray);
+  /* border-radius: 10px; */
+  position: relative;
+}
+.list .checked-container .checked:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.list .checked-container .checked:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.list .checked-container .checked:hover {
+  background-color: var(--accent);
+}
+
+.list .checked-container .checked .remove-from-list {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--primary);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list .checked-container .checked .image-container {
+  width: 100px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 7px;
+  background-color: var(--gray);
+
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list .checked-container .checked .image-container img {
+  height: 100%;
+}
+
+.list .checked-container .checked .text-container {
+  margin-left: 10px;
+  display: grid;
+  gap: 5px;
+  width: 100%;
+}
+
+.list .checked-container .checked .text-container .single-quantity-and-total {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.list .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding-block: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--white);
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  padding-block: 20px;
+  cursor: default;
+  position: relative;
+}
+
+footer .media-links {
+  display: flex;
+  gap: 20px;
+}
+footer .media-links button {
+  transition: 0.4s;
+}
+footer .media-links button:hover {
+  color: var(--primary);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  nav {
+    padding-inline: 30px;
+  }
+  .list.show {
+    width: 100%;
+    padding: 5px;
+  }
+  #cursor {
+    display: none;
+  }
+}
