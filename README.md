@@ -13,4 +13,4 @@ A sleek and responsive shopping cart interface designed for a smooth user experi
 - **CSS3**  
 - **JavaScript (ES6)**  
 
-https://github.com/YounesAmazzalOriginal/Interactive-Shopping-Cart-UI/blob/06d65136c4dff7fe403079bda6cca7d556558569/ScreenShot.png
+[!Image Alt](https://github.com/YounesAmazzalOriginal/Interactive-Shopping-Cart-UI/blob/237e9bfe8afc7a24a74ef5e7ab2e65b35db9f344/ScreenShot.png)
